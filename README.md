@@ -9,14 +9,15 @@ Here a user can search by food by typing an ingredient name or an Dish name .
 It can provide few food cooking tips , and dishes for few diabetic , cardiac people. 
 Each and every dishes containes calories , step by step procedure and tips to be followed.
 
-VISIT MY WEBSITE HERE:
+
+Run index.js file - to walk in this website
 
 
 
 TECHNOLOGY USED:
-HTML 
-CSS
-JAVASCRIPT
-VANILLA JS
-BOOTSTRAP 
+HTML ,
+CSS,
+JAVASCRIPT,
+VANILLA JS,
+BOOTSTRAP ,
 EDMAN DATABASE(oopen source)
