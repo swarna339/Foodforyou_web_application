@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Food4U</title>
+
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='images/logo1.png' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=NTR' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/x-icon" href="images/logo1.png">
+</head>
+
+<body style="background-image: url('bgim.png');background-repeat: no-repeat;background-size: cover;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Food4U</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#mainCarousel">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+				<div id="google_element"></div>
+				<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+				<script>
+					function loadGoogleTranslate(){
+						new google.translate.TranslateElement(
+							"google_element"
+						);
+					}
+				</script>
+            
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <style>
+    
+    	.navbar-default {
+    		background-color: transparent;
+    		border-color: transparent;
+    		-webkit-transition: all 0.5s ease 0s;
+  			-o-transition: all 0.5s ease 0s;
+  			transition: all 0.5s ease 0s;
+    	}
+    	
+    	.navbar-nav { 
+    		margin-top: 40px;
+    		float: right;
+    	}
+    	
+    	@media screen and (max-width: 767px) {
+    	.navbar-nav {
+    		float: none;
+    		text-align: center;
+    		background: rgba(245, 113, 159, 0.756);
+    	}
+    	}
+    	
+    	.navbar-default .navbar-brand {
+    		margin-top: 40px;
+    		font-size: 28px;
+    		font-family: 'Righteous', cursive;
+    		color: rgb(255, 255, 255);
+    		letter-spacing: 1px;
+			transition: all;
+    		-moz-transition:color .5s ease-in;
+   			-o-transition:color .5s ease-in;
+    		-webkit-transition:color .5s ease-in;
+    	}
+    	
+    	.navbar-default .navbar-brand span {
+    		color: #040505;
+			transition: all;
+    		-moz-transition:color .5s ease-in;
+   			-o-transition:color .5s ease-in;
+    		-webkit-transition:color .5s ease-in;
+    	}
+    	
+    	@media screen and (max-width: 400px) {
+    	.navbar-default .navbar-brand {
+    		font-size: 22px;
+    	}
+    	}
+    	
+    	.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand span:hover {
+    		color: #060404;
+    	}
+    	
+    	.navbar-default .navbar-nav>li>a {
+    		color: #fff;
+    		font-size: 14px;
+    		font-family: 'Noto Sans', sans-serif;
+    		text-transform: uppercase;
+    		letter-spacing: 1px;
+    	}
+    	
+    	.navbar-default .navbar-nav>li>a:hover {
+    		color: #e3e9ed;
+    	}
+    	
+    	.navbar-default .navbar-nav>li>a:focus {
+    		color: #e7f2fa;
+    	}
+    	
+    	.navbar-default .navbar-toggle {
+    		margin-top: 40px;
+    		border: none;
+    	}
+    	
+		.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+			background: none;
+		}
+    	
+    	.navbar-default .navbar-toggle .icon-bar {
+    		height: 4px;
+    		width: 28px;
+    		background: #050606;
+		}
+    	
+    	.navbar-default.shrink {
+    		background:rgba(10, 10, 10, 0.8)
+		}
+		
+		.navbar-default.shrink .navbar-nav {
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		
+		.navbar-default.shrink .navbar-brand {
+			margin-top: 20px;
+		}
+		
+		.navbar-default.shrink .navbar-toggle {
+			margin-top: 25px;
+		}
+
+    
+    </style>
+
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="mainCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mainCarousel" data-slide-to="1"></li>
+            <li data-target="#mainCarousel" data-slide-to="2"></li>
+			<li data-target="#mainCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+            <div class="slider_overlay"></div>
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/pic1.jpg');">
+                    <div class="hero">
+                        <hgroup>
+                            <h1>Explore Recipes</h1>
+                            <h3 style="color:coral">Find a new recipe and cook it for a delicious meal </h3>
+                        </hgroup>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="font-family:cursive;">
+
+            <div class="slider_overlay"></div>
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/pic2.webp'); font-family:cursive;">
+                    <div class="hero">
+                        <hgroup>
+                            <h1>Find your perfect "MEAL"</h1>
+                            <h3 style="color:coral;">You can find the meals that suits your medical issue.</h3>
+                        </hgroup>
+                    </div>
+                </div>
+            </div>
+            <div class="item">    
+            <div class="slider_overlay"></div>
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/pic3.jpg');">
+                    <div class="hero">
+                        <hgroup>
+                            <h1>Work Offline</h1>
+                            <h3 style="color:coral">There are the selected recipes for you which you can view it even when you are offline.</h3>
+                        </hgroup>
+                    </div>
+                </div>
+            </div>
+			<div class="item">    
+				<div class="slider_overlay"></div>
+					<!-- Set the third background image using inline CSS below. -->
+					<div class="fill" style="background-image:url('images/pic4.webp');">
+						<div class="hero">
+							<hgroup>
+								<h1>Find Tips</h1>
+								<h3 style="color:coral">There are many interesting Tips awaiting for you come and explore.</h3>
+							</hgroup>
+						</div>
+					</div>
+				</div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#mainCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#mainCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+    
+    <div id="about">
+    	<div class="container">
+    		<div class="text" style="background-color:rgb(10, 8, 8);">
+				<br>
+    			<h2 style="color:white;">About Us</h2>
+				<hr>
+    			<p style="color: rgb(212, 209, 209); font-size:20px;font-family:cursive;">Not many of us know about cooking.Have you heard anything about an app that helps us to cook the food that we desire? Your answer would probably be "YES!“
+					 However, do you know that there are apps for cooking food with the fewest ingredients that you have? Don't worry,
+													it is here! </p>
+													<br>
+			</div>
+
+        <div class="col-md-6">
+            <!-- begin panel group -->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                
+				
+                <!-- panel 1 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4 class="panel-title" style="color:antiquewhite">Numerous Recipes</h4>
+                        </div>
+                    </span>
+                    
+                    <div style="background-color:rgb(1, 46, 43);color: #35354a;"id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                        <!-- Tab content goes here -->
+                        <p style="font-family:cursive;">In our website there are around 250 varieties of dishes which are popular around the globe.
+						These dishes are spread over different continents and got love from different parts of the world.</p>
+					</div>
+                    </div>
+                </div> 
+            
+                
+                <!-- panel 2 -->
+                <div class="panel panel-default"style="background-color:rgb(220, 130, 12);">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h4 style="color:antiquewhite;"class="panel-title collapsed">Health consciousness</h4>
+                        </div>
+                    </span>
+
+                    <div style="background-color:rgb(12, 153, 144);;color: #35354a;"id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                        <!-- Tab content goes here -->
+                        <p style="font-family:cursive;">We have categorised different dishes for different type of people having health issues such as diabetes, heart or BP problems,acidity or ulcers</p>
+						<p style="font-family:cursive;">we care for your disorders.</p>
+						</div>
+                    </div>
+                </div>
+                <!-- / panel 3 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h4 class="panel-title" style="color:antiquewhite;">Offline support</h4>
+                        </div>
+                    </span>
+
+                        <div style="background-color:rgb(1, 46, 43);color: #35354a;"id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree"style="background-color:rgb(220, 130, 12);">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                        <p style="font-family:cursive;"> Don't worry about your poor net connection.You can enjoy our services even in offline.</p>
+						</div>
+                        </div>
+                 </div>
+                <!--  panel 4 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab4" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <h4 class="panel-title" style="color:antiquewhite;">Tips And Tricks</h4>
+                        </div>
+                    </span>
+
+                        <div style="background-color:rgb(12, 153, 144);;color: #35354a;"id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour"style="background-color:rgb(220, 130, 12);">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                        <p style="font-family:cursive;">In our website we have a lot of cooking tips that makes your cooking easier. There are a lot of tips related to preserving item, tricks to cook fast etc..</p>
+						</div>
+                        </div>
+                 </div>
+            	<!--  panel 5 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab5" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <h4 class="panel-title" style="color:antiquewhite;">Mark your favourite recipes</h4>
+                        </div>
+                    </span>
+
+                        <div style="background-color:rgb(1, 46, 43);color: #35354a;" id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive"style="background-color:rgb(220, 130, 12);">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                        <p style="font-family:cursive;">If you found any interesting dish that match your taste then bookmark it to view it later. Keep all your favourite recipes together to view any time.</p>
+						</div>
+                        </div>
+                 </div>
+				 <!--  panel 6 -->
+				 <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab6" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <h4 class="panel-title" style="color:antiquewhite;">Note the important</h4>
+                        </div>
+                    </span>
+
+                        <div style="background-color:rgb(12, 153, 144);color: #04040c;"id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix"style="background-color:rgb(220, 130, 12);">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                        <p style="font-family:cursive;color:rgb(223, 213, 213);">You can take notes of the things that you find important and can use it for future. </p>
+						</div>
+                        </div>
+                 </div>
+				 
+				
+
+			</div>
+             </div> 
+   	 		 <div class="col-md-6">
+    			<div id="carousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+					<ol class="carousel-indicators">
+			  			<li data-target="#carousel" data-slide-to="0" class="active"></li>
+			    		<li data-target="#carousel" data-slide-to="1"></li>
+			    		<li data-target="#carousel" data-slide-to="2"></li>
+			    		<li data-target="#carousel" data-slide-to="3"></li>
+			    		<li data-target="#carousel" data-slide-to="4"></li>
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+			    		<div class="item active">
+			    			<img src="images/teapic.jpg" alt="First slide">
+			    		</div>
+			    		
+			    		<div class="item">
+			    			<img src="images/notespc.jpg" alt="Third slide">
+			    		</div>
+			    		<div class="item">
+			    			<img src="images/bookpic.jpg" alt="Second slide">
+			    		</div>
+			    		
+			    		<div class="item">
+			    			<img src="images/pic5.webp" alt="fifth slide">
+			    		</div>
+						<div class="item">
+			    			<img src="images/collectpic.jpg" alt="fifth slide">
+			    		</div>
+					</div>
+				</div>
+			</div>
+             
+        </div>
+    </div>
+    
+	<div class="content" id="features">
+		<h1 class="heading " style="color:rgb(12, 3, 3); font-size: 50px;">FEATURES</h1>
+		<hr>
+		<hr>
+		<b class="description" style="color:rgb(5, 2, 13);font-size:30px">Explore the world of food anytime</b>
+		<a class="card" href="searchbyrecipe.html" style="color:#010b0b">
+		  <div class="front" style="background-image: url(searchpic.jpg);object-fit:fill;">
+			
+		  </div>
+		  <div class="back" style="background:linear-gradient(-90deg, rgb(202, 92, 32),rgb(187, 83, 38),rgb(197, 64, 3))">
+			<div >
+			  <p style="color:#010b0b;font-family: cursive;">Search your favorite Recipe just by knowing it's name. You can know the ingredients and the procedure to make it.</p>
+      <div >
+        
+      </div>
+			</div>
+		  </div></a><a class="card" href="spcare.html" >
+		  <div class="front" style="background-image: url(./healthc.png);">
+			<p style="color:black;font-size:20px">Special Health Care</p>
+		  </div>
+		  <div class="back" style="background:linear-gradient(-90deg, rgb(202, 92, 32),rgb(187, 83, 38),rgb(197, 64, 3));">
+			<div>
+			  <b style="color:#010b0b;font-family: cursive;">If your are following a diet based on your medical condition, here you can find the one that suits your diet.</b>
+        
+			</div>
+		  </div></a><a class="card" href="searchbyIng.html">
+		  <div class="front" style="background-image: url(searchingr.png);">
+			<p style="color:black;font-size:20px">Search By Ingredients</p>
+		  </div>
+		  <div class="back" style="background:linear-gradient(-90deg, rgb(202, 92, 32),rgb(187, 83, 38),rgb(197, 64, 3))">
+			<div>
+			  <b style="color:#010b0b;font-family: cursive;">If you have a few ingredients left and you doesn't know what to do. Don't worry this will help you with it. Just search the recipe by mentioning ingredients</b>
+			</div>
+		  </div></a><a class="card" href="tips.html">
+		  <div class="front" style="background-image: url(tipscard.jpg)">
+			<p style="color:black;font-size:20px">Tips and Tricks</p>
+		  </div>
+		  
+		  <div class="back" style="background:linear-gradient(-90deg, rgb(202, 92, 32),rgb(187, 83, 38),rgb(197, 64, 3))">
+			<div>
+			  <p style="color:#010b0b;font-family: cursive;">we have many cooking tips that saves your food and also helps you to store different items for a long time with out spoiling.</b>
+			</div>
+		</div> 
+	</a><a class="card" href="spcare.html" >
+		<div class="front" style="background-image: url(./images/Notes.png);">
+		  <p style="color:black;font-size:20px">Notes</p>
+		</div>
+		<div class="back" style="background:linear-gradient(-90deg, rgb(202, 92, 32),rgb(187, 83, 38),rgb(197, 64, 3))">
+		  <div>
+			<p style="color:#010b0b;font-family: cursive;"> Make a note of the things that you feel important.And view it anytime.</p>
+	  
+		  </div>
+		</div>
+	</a><a class="card" href="spcare.html" >
+		<div class="front" style="background-image: url(./images/Bookmarks.png);">
+		  <p style="color:black;font-size:20px">Bookmarks</p>
+		</div>
+		<div class="back" style="background:linear-gradient(-90deg, rgb(202, 92, 32),rgb(187, 83, 38),rgb(197, 64, 3))">
+		  <div>
+			<b style="color:#010b0b;font-family: cursive;">Mark the recipe that you find important and review it when ever you need And enjoy your favourite dish any time.</b>
+	  
+		  </div>
+		</div>
+    
+	</div>
+	</div>
+    <div class="footer" style="padding-top:20px;">
+		<a  style="color:#e3e9ed;">Copyright &copy; 2022 Food4U | All copy rights reserved</a>
+		<a href="tel:7569685795" style="padding-left:30px"><i class="fa fa-phone" style="font-size:20px;color: #747779;"></i></a>
+		<a href= "mailto:ucs20345@rmd.ac.in" style="padding-left:30px"><i class="fa fa-envelope" style="font-size:20px;color: #747779;"></i></a>
+	</div>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/jquery.isotope.js"></script>
+    
+    <script src="js/jquery.scrollUp.min.js"></script>
+    
+    
+	<script type="text/javascript">
+	
+	$('a[href^="#"]').on('click', function(event) {
+    	var target = $(this.getAttribute('href'));
+    	if( target.length ) {
+       		event.preventDefault();
+        	$('html, body').stop().animate({
+            	scrollTop: target.offset().top
+        	}, 1000);
+    	}
+	});
+
+	</script>
+    
+    
+    <!-- Navbar Change on Scroll -->
+	<script type="text/javascript">
+		$(function(){
+ 		var shrinkHeader = 100;
+  		$(window).scroll(function() {
+    		var scroll = getCurrentScroll();
+      		if ( scroll >= shrinkHeader ) {
+           		$('.navbar-default').addClass('shrink');
+        	}
+       		else {
+            	$('.navbar-default').removeClass('shrink');
+        	}
+  		});
+		function getCurrentScroll() {
+    		return window.pageYOffset || document.documentElement.scrollTop;
+    	}
+	});
+
+	</script>    
+
+
+	<!-- Portfolio Isotope Settings -->
+	<script type="text/javascript">
+
+	$(window).load(function(){
+  
+  
+ 	 var $container = $('.portfolioContainer'),
+     	$body = $('body'),
+     	colW = 375,
+      	columns = null;
+
+  
+  	$container.isotope({
+    // disable window resizing
+    	resizable: true,
+   	 	masonry: {
+        columnWidth: colW
+    	}
+  	});
+  
+  	$(window).smartresize(function(){
+    // check if columns has changed
+    	var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    	if ( currentColumns !== columns ) {
+      	// set new column count
+      	columns = currentColumns;
+      	// apply width to container manually, then trigger relayout
+      	$container.width( columns * colW )
+        	.isotope('reLayout');
+    	}
+    
+  	}).smartresize(); // trigger resize to set container width
+  	$('.portfolioFilter a').click(function(){
+        	$('.portfolioFilter .current').removeClass('current');
+        	$(this).addClass('current');
+ 
+        	var selector = $(this).attr('data-filter');
+        	$container.isotope({
+			
+            filter: selector,
+         });
+        	 return false;
+   	 	});
+  
+	});
+
+	</script>
+	
+	
+	<!-- Scroll To Top Settings -->
+    <script type="text/javascript">
+    
+    $(function () {
+  		$.scrollUp({
+    		scrollName: 'scrollUp', // Element ID
+    		topDistance: '300', // Distance from top before showing element (px)
+    		topSpeed: 600, // Speed back to top (ms)
+    		animation: 'fade', // Fade, slide, none
+    		animationInSpeed: 200, // Animation in speed (ms)
+    		animationOutSpeed: 200, // Animation out speed (ms)
+    		activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+    		scrollImg: true,
+  		});
+	});
+    
+    </script>
+
+	
+</body>
+
+</html>
